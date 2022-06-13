@@ -1,0 +1,22 @@
+facts:
+- collected_by: []
+  relationships: []
+  limit_count: -1
+  source: 4d0fff77-40a9-405f-bbd9-c28d0212e96b
+  links: []
+  technique_id: null
+  created: '2022-05-26T20:17:33Z'
+  origin_type: IMPORTED
+  value: evil
+  name: username
+  unique: usernameevil
+  score: 1
+  trait: username
+- trait: password
+  value: evil
+  score: 1
+relationships: []
+id: 4d0fff77-40a9-405f-bbd9-c28d0212e96b
+plugin: ''
+name: q-learning source
+rules: []

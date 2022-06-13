@@ -1,0 +1,31 @@
+- technique_name: test-privilege-escalation
+  tactic: privilege-escalation
+  repeatable: false
+  plugin: ''
+  privilege: ''
+  requirements: []
+  singleton: false
+  additional_info:
+    cleanup: '[]'
+  delete_payload: true
+  access: {}
+  name: privilege-escalation
+  technique_id: T1611
+  description: test ability for privilege-escalation
+  buckets:
+  - privilege-escalation
+  executors:
+  - timeout: 60
+    cleanup: []
+    payloads: []
+    uploads: []
+    platform: windows
+    parsers: []
+    code: null
+    language: null
+    variations: []
+    command: echo "this is a test for a privilege escalation ability"
+    name: psh
+    build_target: null
+    additional_info: {}
+  id: a403eda3-e02c-4e99-8885-5ddf0705899a

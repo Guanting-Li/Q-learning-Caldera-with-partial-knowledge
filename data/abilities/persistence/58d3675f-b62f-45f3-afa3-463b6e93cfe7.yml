@@ -1,0 +1,31 @@
+- technique_name: test-persistence
+  tactic: persistence
+  repeatable: false
+  plugin: ''
+  privilege: ''
+  requirements: []
+  singleton: false
+  additional_info:
+    cleanup: '[]'
+  delete_payload: true
+  access: {}
+  name: persistence
+  technique_id: T1098
+  description: a test persistence ability for q learning
+  buckets:
+  - persistence
+  executors:
+  - timeout: 60
+    cleanup: []
+    payloads: []
+    uploads: []
+    platform: windows
+    parsers: []
+    code: null
+    language: null
+    variations: []
+    command: echo "this is a test ability of persistence"
+    name: psh
+    build_target: null
+    additional_info: {}
+  id: 58d3675f-b62f-45f3-afa3-463b6e93cfe7

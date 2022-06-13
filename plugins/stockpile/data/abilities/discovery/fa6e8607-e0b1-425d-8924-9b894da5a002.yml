@@ -1,0 +1,74 @@
+- requirements: []
+  executors:
+  - code: null
+    uploads: []
+    variations: []
+    language: null
+    additional_info: {}
+    build_target: null
+    payloads: []
+    command: date -u +"%Y-%m-%dT%H:%M:%SZ"
+    parsers:
+    - module: plugins.stockpile.app.parsers.basic
+      parserconfigs:
+      - source: host.current.time
+        custom_parser_vals: {}
+        edge: ''
+        target: ''
+    platform: darwin
+    timeout: 60
+    cleanup: []
+    name: sh
+  - code: null
+    uploads: []
+    variations: []
+    language: null
+    additional_info: {}
+    build_target: null
+    payloads: []
+    command: date -u +"%Y-%m-%dT%H:%M:%SZ"
+    parsers:
+    - module: plugins.stockpile.app.parsers.basic
+      parserconfigs:
+      - source: host.current.time
+        custom_parser_vals: {}
+        edge: ''
+        target: ''
+    platform: linux
+    timeout: 60
+    cleanup: []
+    name: sh
+  - code: null
+    uploads: []
+    variations: []
+    language: null
+    additional_info: {}
+    build_target: null
+    payloads: []
+    command: Get-Date -UFormat '+%Y-%m-%dT%H:%M:%SZ'
+    parsers:
+    - module: plugins.stockpile.app.parsers.basic
+      parserconfigs:
+      - source: host.current.time
+        custom_parser_vals: {}
+        edge: ''
+        target: ''
+    platform: windows
+    timeout: 60
+    cleanup: []
+    name: psh
+  buckets:
+  - discovery
+  additional_info: {}
+  delete_payload: true
+  technique_id: T1124
+  privilege: ''
+  access: {}
+  description: get current system time (ISO 8601)
+  repeatable: false
+  plugin: stockpile
+  name: Get System Time
+  singleton: false
+  tactic: discovery
+  technique_name: System Time Discovery
+  id: fa6e8607-e0b1-425d-8924-9b894da5a002

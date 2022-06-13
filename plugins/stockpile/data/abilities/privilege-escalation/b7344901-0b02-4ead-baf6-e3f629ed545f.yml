@@ -1,0 +1,31 @@
+- delete_payload: true
+  tactic: privilege-escalation
+  technique_id: T1548.002
+  repeatable: false
+  access: {}
+  plugin: stockpile
+  singleton: false
+  executors:
+  - parsers: []
+    language: null
+    platform: windows
+    cleanup: []
+    timeout: 60
+    variations: []
+    command: .\Akagi64.exe 45 C:\Windows\System32\cmd.exe
+    additional_info: {}
+    uploads: []
+    code: null
+    build_target: null
+    payloads:
+    - Akagi64.exe
+    name: psh
+  additional_info: {}
+  description: executes the slui exe file handler hijack
+  requirements: []
+  technique_name: 'Abuse Elevation Control Mechanism: Bypass User Access Control'
+  privilege: ''
+  buckets:
+  - privilege-escalation
+  name: Slui File Handler Hijack
+  id: b7344901-0b02-4ead-baf6-e3f629ed545f

@@ -1,0 +1,18 @@
+adversary_id: d01dfa7a-c986-467f-8fd4-786a18f1bd9e
+name: q-learning
+description: test adversary for q learning
+atomic_ordering:
+- a403eda3-e02c-4e99-8885-5ddf0705899a
+- 58d3675f-b62f-45f3-afa3-463b6e93cfe7
+- dfc08d8e-9da0-42a2-a422-a34d394f0310
+- c1cd6388-3ced-48c7-a511-0434c6ba8f48
+- 13379ae1-d20e-4162-91f8-320d78a35e7f
+- 14a21534-350f-4d83-9dd7-3c56b93a0c17
+- 48d31e40ff939a9ea616219271b1b7a8
+- 95ad5d69-563e-477b-802b-4855bfb3be09
+- a403eda3-e02c-4e99-8885-5ddf0705899a
+- 9849d956-37ea-49f2-a8b5-f2ca080b315d
+- 830bb6ed-9594-4817-b1a1-c298c0f9f425
+- 02de522f-7e0a-4544-8afc-0c195f400f5f
+objective: 495a9828-cab1-44dd-a0ca-66e58177d8cc
+tags: []

@@ -1,0 +1,30 @@
+- delete_payload: true
+  tactic: discovery
+  technique_id: T1082
+  repeatable: false
+  access: {}
+  plugin: stockpile
+  singleton: false
+  executors:
+  - parsers: []
+    language: null
+    platform: windows
+    cleanup: []
+    timeout: 60
+    variations: []
+    command: '[environment]::OSVersion.Version'
+    additional_info: {}
+    uploads: []
+    code: null
+    build_target: null
+    payloads: []
+    name: psh
+  additional_info: {}
+  description: Find OS Version
+  requirements: []
+  technique_name: System Information Discovery
+  privilege: ''
+  buckets:
+  - discovery
+  name: Find OS Version
+  id: b6b105b9-41dc-490b-bc5c-80d699b82ce8

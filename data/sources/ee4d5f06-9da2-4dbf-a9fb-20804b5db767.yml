@@ -1,0 +1,9 @@
+plugin: ''
+name: SC source
+rules: []
+facts:
+- trait: remote.host.fdqn
+  value: DESKTOP-06UMA4J.caldera.local
+  score: 1
+id: ee4d5f06-9da2-4dbf-a9fb-20804b5db767
+relationships: []

@@ -1,0 +1,10 @@
+---
+
+id: 80efdb6c-bb82-4f16-92ae-6f9d855bfb0e
+name: privileged_persistence
+description: |
+  Privileged Persistence Planner: Attempt to spread to as many hosts as possible and establish persistence.
+  If privilege escalation attempts succeed, establish persistence. Then, collect data.
+module: plugins.stockpile.app.privileged_persistence
+params: {}
+ignore_enforcement_modules: []

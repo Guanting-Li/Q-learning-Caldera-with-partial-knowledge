@@ -1,0 +1,10 @@
+certifi
+chardet
+colorama
+configparser
+crayons
+idna
+requests
+selenium
+urllib3
+webdriver-manager
